@@ -20,8 +20,8 @@ sudo multiNode.bash name of (hadoop.bin.tar.gz) (name of jdk.tar.gz) (number of 
 
 This script will name the name node as nn, secondary name node as sn, work nodes as dn01, ..., dn0n. 
 
-PITFALL: ssh under expect may fail to log into name node from time to time. If it happens, do not kill the script
+PITFALL: ssh under expect may fail to log into name node from time to time. If it happens, do not kill the 
 
-with ctrl+c immediately. Instead, let it finish on its own and re-run the script. 
+script with ctrl+c immediately. Instead, let it finish on its own and re-run the script. 
 
 
