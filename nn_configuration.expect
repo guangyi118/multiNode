@@ -1,0 +1,33 @@
+#!/usr/bin/expect -f
+
+set timeout 10
+set container ubuntu@[lindex $argv 0]
+set data_node_number [lindex $argv 1]
+spawn ssh ubuntu@[lindex $argv 0]
+expect "*?/no?" {
+    send "yes\r"
+    expect "*?assword:" { send "ubuntu\r" }
+
+    } "*?assword:" { send "ubuntu\r" } 
+
+puts "\n-----------------------------"
+puts "Logged into $container"
+puts "-------------------------------\n"
+expect "$ " { send "ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa\r" }
+expect "$ " { send "cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys\r"}
+expect "$ " { send "mkdir data\r"}
+#login as root
+expect "*$ " { send "sudo -s\r" }
+expect "*untu:" { send "ubuntu\r" }
+expect "#" {send "echo '    StrictHostKeyChecking no' >> /etc/ssh/ssh_config\r"}
+#generate file for hadoop log
+expect "#" { send "mkdir /opt/hadoop/logs\r" }
+expect "#" { send "chmod 777 /opt/hadoop/logs\r" }
+#interact 
+expect "#" { send "exit\r" }
+expect "$ " { send "exit\r" }
+
+
+
+
+
