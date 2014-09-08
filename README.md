@@ -1,6 +1,7 @@
 Scripts to set up a hadoop cluster with mutiple work nodes on a single machine using Linux container and hadoop. 
 
 Requirements:
+
 1 Must download hadoop bin.tar.gz and jdk tar.gz and copy them into the same directorywhere your scripts stay. 
 
 jdk download site: http://www.oracle.com/technetwork/java/javase/downloads/index.html 
