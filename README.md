@@ -19,7 +19,7 @@ Scripts to set up a hadoop cluster with mutiple work nodes on a single machine u
 
 To set up a hadoop cluster with number of work nodes, just type in the command below. Don't forget sudo. 
 
-sudo multiNode.bash name of (hadoop.bin.tar.gz) (name of jdk.tar.gz) (number of work nodes)
+sudo multiNode.bash name of (hadoop.bin.tar.gz) (name of jdk.tar.gz) (number of work nodes) 
 
 This script will name the name node as nn, secondary name node as sn, work nodes as dn01, ..., dn0n. 
 
@@ -41,9 +41,7 @@ This script will name the name node as nn, secondary name node as sn, work nodes
 
     h. run mapreduce wordcount example: hadoop jar /opt/hadoop/hadoop-$version-example.jar wordcount input output       
 
-    note: you need to create the input directory in hdfs and copy the txt input into the directory,
-
-    you don't have to create output dir since it will be created automatically. Check result of execution under output dir. 
+    note: you need to create the input directory in hdfs and copy the txt input into the directory, you don't have to create output dir since it will be created automatically. Check result of execution under output dir. 
     
     You can also check the result under hadoop/logs
 
@@ -51,9 +49,7 @@ This script will name the name node as nn, secondary name node as sn, work nodes
 
 remember to exit from namenode when you are done with your job. It is a good habit.  
 
-lxc is a memory consuming application. Creating one node will take about 1 GB memory. Do not create too many nodes that
-
-your machine cannot handle. 
+lxc is a memory consuming application. Creating one node will take about 1 GB memory. Do not create too many nodes that your machine cannot handle. 
     
     
 6 PITFALL:
