@@ -13,13 +13,13 @@ Scripts to set up a hadoop cluster with mutiple work nodes on a single machine u
 
     we test this script under hadoop-1.2.1-bin.tar.gz, jdk-8u11-linux-x64.tar.gz and ubuntu 14.04. 
 
-2 chmod 755 multinode.bash, chmod 755 nn configuration.expect
+2 chmod 755 multinode.bash, chmod 755 nn_configuration.expect
 
 3 Usage: 
 
 To set up a hadoop cluster with number of work nodes, just type in the command below. Don't forget sudo. 
 
-sudo multiNode.bash name of (hadoop.bin.tar.gz) (name of jdk.tar.gz) (number of work nodes) 
+sudo multiNode.bash (name of hadoop.bin.tar.gz) (name of jdk.tar.gz) (number of work nodes) 
 
 This script will name the name node as nn, secondary name node as sn, work nodes as dn01, ..., dn0n. 
 
