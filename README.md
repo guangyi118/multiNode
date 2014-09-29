@@ -49,7 +49,9 @@ This script will name the name node as nn, secondary name node as sn, work nodes
 
 remember to exit from namenode when you are done with your job. It is a good habit.  
 
-lxc is a memory consuming application. Creating one node will take about 1 GB memory. Do not create too many nodes that your machine cannot handle. 
+lxc is a memory consuming application. Creating one node will take about 1 GB memory. Do not create too many nodes that your machine cannot handle.
+
+This script is not compatible with hadoop version greater than or equal to 2.2. 
     
     
 6 PITFALL:

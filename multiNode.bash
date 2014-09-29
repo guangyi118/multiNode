@@ -46,8 +46,8 @@ done
 
 #create name node
 lxc-create -t $UBUNTU -n $NN
-cp -r temp/hadoop-1.2.1  /var/lib/lxc/$NN/rootfs/opt/hadoop
-cp -r temp/jdk1.8.0_11  /var/lib/lxc/$NN/rootfs/opt/jdk
+cp -r temp/hadoop*  /var/lib/lxc/$NN/rootfs/opt/hadoop
+cp -r temp/jdk*  /var/lib/lxc/$NN/rootfs/opt/jdk
 echo 'export JAVA_HOME=/opt/jdk' >> /var/lib/lxc/$NN/rootfs/etc/profile
 echo 'export PATH=$PATH:$JAVA_HOME/bin' >> /var/lib/lxc/$NN/rootfs/etc/profile
 echo 'export PATH=$PATH:/opt/hadoop/bin' >> /var/lib/lxc/$NN/rootfs/etc/profile
@@ -188,6 +188,6 @@ do
 	DN="dn0$i"
 	lxc-start -n $DN -d
 done
-
+rm -rf temp
 echo 'The entire deployment has completed.'
 
